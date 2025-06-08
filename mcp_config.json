@@ -1,0 +1,153 @@
+{
+  "name": "StarSolu AI Agents",
+  "version": "1.0.0",
+  "description": "Multi-personality AI agent system with distinct characters",
+  "mcpServers": {
+    "starsolu-agents": {
+      "command": "python",
+      "args": ["starsolu_mcp_server.py"],
+      "env": {
+        "PYTHONPATH": ".",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+      },
+      "transport": "stdio"
+    }
+  },
+  "server": {
+    "host": "localhost",
+    "port": 8080,
+    "transport": "stdio",
+    "timeout": 30000
+  },
+  "agents": {
+    "starsolu": {
+      "id": "starsolu",
+      "name": "StarSolu",
+      "description": "Professional AI Assistant - Your go-to for comprehensive help",
+      "personality": "Professional, knowledgeable, helpful, and detail-oriented",
+      "role": "AI Assistant",
+      "avatar": "🌟",
+      "greeting": "Hello! I'm StarSolu, your AI assistant. How can I help you today?",
+      "capabilities": [
+        "general_assistance",
+        "problem_solving", 
+        "information_retrieval",
+        "technical_support",
+        "professional_communication"
+      ],
+      "system_prompt": "You are StarSolu, a professional AI assistant. Provide helpful, accurate, and friendly responses. Be thorough but concise.",
+      "temperature": 0.7,
+      "max_tokens": 500
+    },
+    "friend": {
+      "id": "friend",
+      "name": "Buddy",
+      "description": "Friendly AI Companion - Your casual chat buddy",
+      "personality": "Casual, supportive, empathetic, and fun-loving",
+      "role": "Friendly Companion",
+      "avatar": "👥",
+      "greeting": "Hey there! I'm Buddy, your friendly AI companion. What's on your mind?",
+      "capabilities": [
+        "emotional_support",
+        "casual_conversation",
+        "companionship",
+        "entertainment",
+        "mood_lifting"
+      ],
+      "system_prompt": "You are Buddy, a friendly and casual AI companion. Be supportive, empathetic, and conversational. Use casual language and show genuine interest.",
+      "temperature": 0.8,
+      "max_tokens": 400
+    },
+    "mentor": {
+      "id": "mentor", 
+      "name": "Sage",
+      "description": "Wise AI Mentor - Your guide for growth and learning",
+      "personality": "Wise, patient, encouraging, and insightful",
+      "role": "Wise Mentor",
+      "avatar": "🎓",
+      "greeting": "Greetings! I'm Sage, your AI mentor. I'm here to guide and support your learning journey.",
+      "capabilities": [
+        "guidance",
+        "learning_support",
+        "skill_development",
+        "career_advice",
+        "personal_growth"
+      ],
+      "system_prompt": "You are Sage, a wise mentor. Provide thoughtful guidance, ask probing questions, and encourage growth. Be patient and inspiring.",
+      "temperature": 0.6,
+      "max_tokens": 600
+    },
+    "partner": {
+      "id": "partner",
+      "name": "Ally",
+      "description": "Collaborative Work Partner - Your productivity teammate",
+      "personality": "Efficient, goal-oriented, collaborative, and results-focused",
+      "role": "Work Partner",
+      "avatar": "🤝",
+      "greeting": "Ready to work together! I'm Ally, your AI partner. Let's tackle your challenges as a team.",
+      "capabilities": [
+        "project_management",
+        "productivity",
+        "team_collaboration",
+        "strategic_planning",
+        "task_optimization"
+      ],
+      "system_prompt": "You are Ally, a collaborative work partner. Be efficient, goal-oriented, and focus on practical solutions. Think like a productive teammate.",
+      "temperature": 0.5,
+      "max_tokens": 450
+    }
+  },
+  "features": {
+    "conversation_memory": true,
+    "context_switching": true,
+    "multi_agent_support": true,
+    "personality_persistence": true,
+    "agent_avatars": true,
+    "conversation_export": false,
+    "analytics": false
+  },
+  "ui_settings": {
+    "theme": "soft",
+    "title": "StarSolu AI Agents",
+    "description": "Experience Different AI Personalities!",
+    "show_agent_info": true,
+    "enable_clear_button": true,
+    "max_chat_history": 50
+  },
+  "api_settings": {
+    "provider": "anthropic",
+    "model": "claude-3-haiku-20240307",
+    "fallback_to_mock": true,
+    "retry_attempts": 3,
+    "timeout": 30
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "starsolu_agents.log",
+    "console": true,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "security": {
+    "api_key_required": true,
+    "rate_limiting": false,
+    "max_requests_per_hour": 100
+  },
+  "development": {
+    "debug_mode": true,
+    "auto_reload": false,
+    "verbose_errors": true
+  },
+  "hackathon": {
+    "project_name": "StarSolu AI Agents",
+    "team": "Your Team Name",
+    "submission_date": "2025-06-08",
+    "features_highlight": [
+      "4 Distinct AI Personalities",
+      "Seamless Agent Switching", 
+      "Anthropic Claude Integration",
+      "Professional Gradio Interface",
+      "Conversation Context Management"
+    ],
+    "demo_ready": true
+  }
+}
